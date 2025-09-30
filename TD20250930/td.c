@@ -11,20 +11,20 @@ int main(int argc, const char *argv[])
 	printf("Entrez la distance entre les deux objets (en km avec la notation scientifique) : ");
 	scanf("%lf", &d);
 
-	double const G = 6.67e-11;
+	double const G = 6.67e-20;
 	
 		if (d == 0)
 		{
 		printf("ERROR: Division par 0\n");
 		}
-		else if (m1 <= 0 || m2 <= 0 || d <= 0)
+		else if (m1 < 0 || m2 < 0 || d < 0)
 		{
 		printf("ERROR: valeur negative\n");
 		}
 		else
 		{
 		F = G * m1 * m2 / pow(d, 2);
-		printf("La force d'attraction des deux objets est: %.3lf N \n", F); 
+		printf("La force d'attraction des deux objets est: %.3e N \n", F); 
 		}
 
 }
