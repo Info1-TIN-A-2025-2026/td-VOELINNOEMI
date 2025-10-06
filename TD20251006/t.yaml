@@ -1,0 +1,21 @@
+tests :
+  - name: Terre-Lune
+    stdin: "5.972e24 7.3e22 3.844e5"
+    stdout:
+      - contains: "1.968e+17"
+  - name : Terre-Soleil
+    stdin: "5.972e+24 1.988e+30 1.49e+8"
+    stdout :
+      - contains: "3.567e+19"
+  - name : Terre-ISS
+    stdin: "5.972e+24 4.2e+5 6.7e+2"
+    stdout:
+      - contains: "3.727e+05"
+  - name : Error negative
+    stdin : "-16 -20 12"
+    stdout :
+      - contains : "ERROR: valeur negative"
+  - name : Error division zero
+    stdin: "120 120 0"
+    stdout:
+      - contains: "ERROR: Division par 0"
