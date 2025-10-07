@@ -17,18 +17,12 @@ int main(int argc, const char *argv[])
 	// printf("y = %.4f\n", y);
 	// printf("ret = %d\n", ret);
 
-	// printf("Enter two floating points value (space separated): ");
-	// ret = scanf("%f%f", &x, &y);
-	// printf("ret = %d\n", ret);
-	// printf("x = %.4f\n", x);
-	// printf("y = %.4f\n", y);
-
 	printf("Enter two floating points value (space separated): ");
-	ret = scanf("%f:%f", &x, &y); // separation choisie
+	ret = scanf("%f%f", &x, &y);
 	printf("ret = %d\n", ret);
 	printf("x = %.4f\n", x);
 	printf("y = %.4f\n", y);
-
-	char a = 0;
-	scanf("%ld", &a);
+	
+	// char a = 0;
+	// scanf("%ld", a); //pas content, ce n'est pas supposé marcher (3 octets en mémoire écrasés en mémoire)
 }
