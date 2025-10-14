@@ -1,21 +1,25 @@
 tests :
-  - name: Terre-Lune
-    stdin: "5.972e24 7.3e22 3.844e5"
+  - name: Valeures imposées
+    stdin: "245.27 240 336"
     stdout:
-      - contains: "1.968e+17"
-  - name : Terre-Soleil
-    stdin: "5.972e+24 1.988e+30 1.49e+8"
-    stdout :
-      - contains: "3.567e+19"
-  - name : Terre-ISS
-    stdin: "5.972e+24 4.2e+5 6.7e+2"
+      - contains: "29.92"
+  - name: Valeures correctes
+    stdin: "100 100 365"
     stdout:
-      - contains: "3.727e+05"
-  - name : Error negative
-    stdin : "-16 -20 12"
-    stdout :
-      - contains : "ERROR: valeur negative"
-  - name : Error division zero
-    stdin: "120 120 0"
+      - contains : "11.58"
+  - name: Prix négatif
+    stdin: "-100 100 360"
     stdout:
-      - contains: "ERROR: Division par 0"
+      - contains: "Valeur impossible ! (S0 Négative/Nul)"
+  - name: Strike négatif
+    stdin: "100 -100 360"
+    stdout:
+      - contains : "Valeur impossible ! (K négatif/nul)"
+  - name: Temps négatif
+    stdin: "100 100 -12"
+    stdout:
+      - contains: Valeur impossible (T Négatif/nul)
+  - name: Temps Nul
+    stdin: "100 100 0"
+    stdout:
+      - contains: Valeur impossible (T Négatif/nul)
