@@ -1,0 +1,6 @@
+tests :
+  - name: Valeures imposées
+    stdin: "245.27 240 336"
+    stdout:
+      - contains: "29.92"
+  
