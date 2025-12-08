@@ -28,28 +28,28 @@ int main(int argc, const char *argv[])
     //     putchar('\n');
     // }
 
-    // for (int l = 0; l < 2; l++)
-    // {
-    //     for (int c = 0; c < n - 1; c++)
-    //         putchar(' ');
-    //     puts("|");
-    // }
-
-    // for (int c = 0; c < n - 2; c ++)
-    //     putchar(' ');
-    // puts("---");
-
-    unsigned long n = atol(argv[1]);
-
-    double a = 0;
-    double f = 0;
-    double p = 0;
-    for (int i = 0; i <= n; i++)
+    for (int l = 0; l < 2; l++)
     {
-        f = (pow(-1, i)) / (2 * i + 1);
-        a = a + f;
+        for (int c = 0; c < n - 1; c++)
+            putchar(' ');
+        puts("|");
     }
-    p = 4 * a;
-    printf("%.10lu: %+10.8lf\n",n, p);
-    return 0;
+
+    for (int c = 0; c < n - 2; c ++)
+        putchar(' ');
+    puts("---");
+
+    // unsigned long n = atol(argv[1]);
+
+    // double a = 0;
+    // double f = 0;
+    // double p = 0;
+    // for (int l = 0; l <= n; l++)
+    // {
+    //     f = (pow(-1, l)) / (2 * l + 1);
+    //     a = a + f;
+    // }
+    // p = 4 * a;
+    // printf("%.10lu: %+10.8lf\n",n, p);
+
 }
